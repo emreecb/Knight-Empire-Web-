@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+          {{haberobj?.title}}
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <img class="card-img-top" src="{{haberobj?.picture}}" alt="apos" width="286px" height="286px">
+            <p style="margin-top:5px">{{haberobj?.explanation}}</p>
+            <footer class="blockquote-footer">Knight Empire Ekibi</footer>
+          </blockquote>
+        </div>
+        <div class="row justify-content-md-center" style="padding-top:15px">
+            <button class="text-center" style="margin-bottom:15px; font-weight: bolder" routerLink="/haberler" class="btn btn-custom">Haberlere Dön!</button>
+        </div>
+    </div>
+</div>

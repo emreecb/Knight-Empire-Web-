@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent containNavBar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" routerLink="">
+        <img src="../assets/logo.png" class="log" alt="logo">
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item navbarlinkrenk">
+                <a class="nav-link" routerLink="">ANA SAYFA <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item navbarlinkrenk">
+                <a class="nav-link" routerLink="/haberler">HABERLER</a>
+            </li>
+            <li class="nav-item navbarlinkrenk">
+                <a class="nav-link" routerLink="/medya">MEDYA</a>
+            </li>
+            <li class="nav-item navbarlinkrenk">
+                <a class="nav-link" routerLink="/knightrank">Şövalye Sıralaması</a>
+            </li>
+            <li class="nav-item dropdown navbarlinkrenk">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Rehber
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="/hikaye">Hikayesi</a>
+                    <a class="dropdown-item" routerLink="/sikcasorulansorular">S.S.S</a>
+                    <a class="dropdown-item" routerLink="/kurallar">Kurallar</a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<div class="footer">
+    <div class="row">
+        <div class="col-md-3">
+            <li class="footerlink">
+                <a class="nav-link" routerLink="/haberler">HABERLER</a>
+            </li>
+            <li class="footerlink">
+                <a class="nav-link" routerLink="/sikcasorulansorular">S.S.S</a>
+            </li>
+            <li class="footerlink">
+                <a class="nav-link" routerLink="/kurallar">Kurallar</a>
+            </li>
+        </div>
+        <div class="col-md-3">
+            <li class="footerlink">
+                <a class="nav-link" routerLink="/medya">Medya</a>
+            </li>
+            <li class="footerlink">
+                <a class="nav-link" routerLink="/medya">Duvar Kağıtları</a>
+            </li>
+            <li class="footerlink">
+                <a class="nav-link" routerLink="/iletisimformu">İletişim Formu</a>
+            </li>
+        </div>
+        <div class="col-md-3">
+            <li class="footerlink">
+                <a class="nav-link" routerLink="/hakkimizda">Hakkımızda</a>
+            </li>
+            <li class="footerlink">
+                <a class="nav-link" routerLink="/registerfirst">kayıt ol!</a>
+            </li>
+            <li class="footerlink">
+                <a class="nav-link" routerLink="/login">Oturum aç</a>
+            </li>
+           
+        </div>
+        <div class="col-md-3">
+            <li class="footerlink">
+                <a class="nav-link" routerLink="/knightrank">ŞÖVALYE SIRALAMASI</a>
+            </li>
+            <li class="footerlink">
+                <a class="nav-link" routerLink="/vipstorage">VIP STORE</a>
+            </li>
+            
+
+        </div>
+
+
+    </div>
+</div>

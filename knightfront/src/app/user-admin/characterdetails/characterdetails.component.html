@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" style="padding-top:10px">
+      <div class="card">
+        <div class="card-header" style="height: 60px">
+          Komutlar
+        </div>
+        <div class="card-body card-body-edit">
+
+          <ul class="list-group">
+            <li class="list-group-item"><a routerLink="/User/inventory"><strong>Envanter</strong></a></li>
+            <li class="list-group-item"><a routerLink="/User/bolgeler"><strong>Savaşa Git</strong></a></li>
+            <li class="list-group-item"><a routerLink="/User/vipstorage"><strong>Vip Market</strong></a></li>
+            <li class="list-group-item"><a routerLink="/User/pvp"><strong>Pvp</strong></a></li>
+            <li class="list-group-item"><a routerLink="/User/quest"><strong>Başarılar</strong></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9" style="padding-top:10px">
+      <div class="row">
+        <div class="card">
+          <div class="card-header">
+            {{character?.nickname}}
+            <img *ngIf="character.nation" src="/assets/charscreen/elmoradflag.png" class="rounded float-right" width="25px" height="35px">
+            <img *ngIf="!character.nation" src="/assets/charscreen/karusflag.png" class="rounded float-right" width="25px" height="35px">
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4">
+                <img  *ngIf="character.nation"src="/assets/charscreen/elmorad_warrior.png" class="img-fluid" alt="Responsive image">
+                <img *ngIf="!character.nation" src="/assets/charscreen/karus_warrior.png" class="img-fluid" alt="Responsive image">
+                <div class="col-md-12" style="margin-top:5px">
+                  <p style="color:black; font-weight:bolder; text-align: center"><img src="{{fuzzyobj?.logo}}" class="img-fluid">  {{fuzzyobj?.rutbeAdi}}</p>
+                  <p style="color:darkgoldenrod; font-style:italic; font-weight: bold">- {{fuzzyobj?.aciklama}}</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <ul class="list-group">
+                  <li class="list-group-item"><i class="ra ra-castle-flag"></i>&nbsp; <strong>Nation:</strong>
+                    {{nation}}</li>
+                  <li class="list-group-item"><i class="ra ra-trophy"></i>&nbsp; <strong>Level:</strong>
+                      {{character?.characterLevel}}</li> 
+                  <li class="list-group-item"><i class="ra ra-bottled-bolt"></i>&nbsp; <strong>Mana:</strong>
+                    {{character?.mana}}/100</li>
+                  <li class="list-group-item"><i class="ra ra-castle-flag"></i>&nbsp; <strong>Exp:</strong>
+                    {{character?.experience}} / {{needexp}}</li>
+                  <li class="list-group-item"><i class="ra ra-health"></i>&nbsp; <strong>Health:</strong>
+                      {{character?.health}}</li>
+                  <li class="list-group-item"><i class="ra ra-crossed-swords"></i>&nbsp; <strong>Attack:</strong>
+                    {{character?.attack}}</li>
+                  <li class="list-group-item"><i class="ra ra-heavy-shield"></i>&nbsp; <strong>Defence:</strong>
+                    {{character?.defence}}</li>
+                  <li class="list-group-item"><i class="ra ra-monster-skull"></i>&nbsp; <strong>NP:</strong>
+                    {{character?.nationalPoint}}</li>
+                  <li class="list-group-item"><i class="ra ra-gold-bar"></i>&nbsp; <strong>Coin:</strong>
+                    {{money?.coin}}</li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <div *ngIf="trainingshow">
+                  <button class="bluebutton" *ngIf="degisken" (click)="rest()">Dinlenme <i class="ra ra-bottled-bolt"></i></button>
+                  <button class="bluebutton" *ngIf="!degisken" (click)="finished(1)">{{message}} DURDUR <i class="ra ra-muscle-up"></i></button>
+                </div>
+                <br>
+                <br>
+                <div *ngIf="restshow">
+                  <button class="greenbutton" *ngIf="degisken" (click)="training()">Antreman <i class="ra ra-muscle-up"> </i></button>
+                  <button class="greenbutton" *ngIf="!degisken" (click)="finished(2)">{{message}} DURDUR <i class="ra ra-bottled-bolt"></i></button>
+                </div>
+                <br>
+                <br>
+                <div *ngIf="workshow">
+                  <button class="redbutton" *ngIf="degisken" (click)="work()"> Ticaret<i class="ra ra-gold-bar"></i></button>
+                  <button class="redbutton" *ngIf="!degisken" (click)="finished(3)">{{message}} DURDUR<i class="ra ra-gold-bar"></i></button>
+                </div>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+        <!---card divi-->
+      </div>
+      <!----cardın olduğu div bitimi-->
+    </div>
+
+
+  </div>
+</div>
+<!--container-->

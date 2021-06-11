@@ -1,0 +1,66 @@
+.container{
+    margin-left:auto;
+    padding:50px;
+    background-color:#ffffff4a;
+    position: relative;
+}
+
+.card-text{
+    color:black;
+}
+
+.card-title{
+    color: black;
+    font-weight: bolder;
+}
+
+.text-muted{
+    text-align: center;
+    color: red!important;
+}
+
+.card{
+    border-color:white;
+}
+
+.centered{
+    text-align: center;
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.btn-custom{
+    background-color:#d8c489;
+    color: black;
+}
+.imgborder{
+    border-style: groove;
+    border-width: 1px;  
+    border-color:lightgray;
+}
+
+.textcontainimage {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered2 {
+    font-weight: bold;
+    position: absolute;
+    font-size: 3vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.my-modal {
+    background-color: #000 !important;
+    border: 2px solid rgba(156, 77, 0, 0.75);    
+}
+
+.col-md-1 {
+    padding:0px;
+}

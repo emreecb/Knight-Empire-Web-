@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="card-deck">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let item of moblist" style="padding-top:15px">
+        <div class="card">
+          <img class="card-img-top" src="{{item?.photo}}" alt="Card image cap">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">{{item?.name}}</h5>
+              <p class="card-text">Savaşmak için tavsiye edilen minimum level: {{item?.minLevel}} </p>
+              <a (click)="battle(item,item.id,template,template2)" class="btn btn-custom">Savaş!</a>
+            </div>
+          </div>
+          <div class="card-footer">
+            <p class="centered">Harcanacak Mana Değeri: {{item?.manaValue}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-md-center" style="padding-top:15px">
+    <button class="text-center" routerLink="/User/characterdetails" class="btn btn-custom">Ana Sayfaya Dön!</button>
+  </div>
+
+</div>
+
+
+
+<ng-template #template>
+  <!-- <div class="container"> -->
+  <div class="my-modal">
+    <div class="row justify-content-center" style="margin-top:10px">
+      <div class="col-md-8">
+        <a href="#">
+          <div class="textcontainimage">
+            <img class="imgborder" src="../../../../assets/conceptart/ConceptArt_06.jpg" height="100%" width="100%">
+            <div class="centered2">Zafer!</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div style="text-align:center">
+      <br>
+      <p>Harcanan Mana: {{harcananmana}}</p>
+      <p>Kazanılan Exp: {{Sonuc.exp}}</p>
+      <p>Düşürülen İtemler:</p>
+      <div class="row justify-content-center" style="margin-bottom:10px">
+        <div class="col-md-1" style="margin-right:15px">
+          <img class="imgborder" src="../../../../assets/items/coin.jpg"  title="{{Sonuc.coin}} Coin" style="width: -webkit-fill-available">
+        </div>
+        <div class="col-md-1" *ngIf="itemactive">
+          <img class="imgborder" src="{{itemobje?.photo}}" title="{{itemobje?.itemName}}" style="width: -webkit-fill-available">
+        </div>
+      </div>
+
+    </div>
+    <!-- </div> -->
+  </div>
+
+</ng-template>
+
+<ng-template #template2>
+  <!-- <div class="container"> -->
+  <div class="my-modal">
+    <div class="row justify-content-center" style="margin-top:10px">
+      <div class="col-md-8">
+        <a href="#">
+          <div class="textcontainimage">
+            <img class="imgborder" src="../../../../assets/conceptart/ConceptArt_06.jpg" height="100%" width="100%">
+            <div class="centered2">Bozgun!</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  <!-- </div> -->
+  </div>
+
+</ng-template>

@@ -1,0 +1,144 @@
+.containNavBar{ 
+    margin-top:32px;
+    padding-left:200px;
+    position: relative;
+}
+
+.bg-transparent {
+    background-color: #f8f9fa00!important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color:#d8c489;
+    font-size: 0.9vw;
+    text-transform: uppercase;
+    margin-right:30px;
+    font-weight: bold;
+    border-bottom-style: groove;
+    border-bottom-color: transparent;
+}
+.navbar-light .navbar-brand {
+    margin-right:80px;
+}
+
+.dropdown-menu{
+    background-color: #01000094;
+}
+
+.dropdown-menu :hover{
+    background-color: #d8c489;
+}
+
+.log{
+    width:15vw;
+    height: auto;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    border-bottom-style: groove;
+    border-bottom-color: #a99359;
+  }
+
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.1);
+    background-color: #d8c489;
+}
+
+
+.redbutton{
+    color: #fff;
+    /* background: #d43232; */
+    background: -moz-linear-gradient(top,#d43232 0,#bb2020 27%,#bb2020 77%,#cd2d2d 100%);
+    /* background: -webkit-linear-gradient(top,#d43232 0,#bb2020 27%,#bb2020 77%,#cd2d2d 100%); */
+    background: linear-gradient(to bottom,#d43232 0,#bb2020 27%,#bb2020 77%,#cd2d2d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d43232', endColorstr='#cd2d2d', GradientType=0);
+    -webkit-box-shadow: inset 0 0 0 0 #ff8c8c;
+    -moz-box-shadow: inset 0 0 0 0 #ff8c8c;
+    box-shadow: inset 0 0 0 0 #ff8c8c;
+    border: 1px solid #f45757;
+    font-size: 1vw;
+    border-radius: 2px;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    font-weight: 550;
+    margin-left:60px;
+    width:10vw;
+    height: 6vh;
+}
+
+.footer{ 
+    padding-left:120px;
+    margin-top: 30px;
+    background-color: #0e0e10;
+    bottom:0;
+    width: 100%;
+}
+
+.footerlink{
+    color:#d8c489;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-right:30px;
+    list-style: none;
+}
+
+a{
+    color:#d8c489;
+}
+
+@media screen and (max-width:480px) {
+    .footer{ 
+        padding-left:30px;
+        margin-top: 30px;
+        background-color: #0e0e10;
+        bottom:0;
+        width: 100%;
+    }
+    .log{
+        width:115px;
+        height: auto;
+    }
+    .containNavBar{ 
+        margin-top:55px;
+        padding-left:0px;
+        padding-right:0px;
+        position: relative;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color:black;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-right:30px;
+        font-weight: bold;
+        border-bottom-style: groove;
+        border-bottom-color: black;
+        background-color: #d8c489;
+    }
+    .navbar-light .navbar-brand {
+        margin-right:0px;
+    }
+}
+
+@media screen and (min-width:1168px) and (max-width:1268px){
+    .containNavBar{ 
+        margin-top:40px;
+        padding-left:100px;
+        position: relative;
+    }
+}
+
+@media screen and (min-width:1068px) and (max-width:1168px){
+    .containNavBar{ 
+        margin-top:40px;
+        padding-left:50px;
+        position: relative;
+    }
+}
+
+@media screen and (min-width:968px) and (max-width:1068px){
+    .containNavBar{ 
+        margin-top:40px;
+        padding-left:5px;
+        position: relative;
+    }
+}

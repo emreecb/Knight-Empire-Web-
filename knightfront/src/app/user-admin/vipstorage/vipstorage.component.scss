@@ -1,0 +1,54 @@
+.container{
+    margin-left:auto;
+    padding:50px;
+    background-color:#ffffff4a;
+    position: relative;
+}
+
+.imgborder{
+    border-style: groove;
+    border-width: 1px;  
+    border-color:lightgray;
+}
+
+.textcontainimage {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-weight: bold;
+}
+
+h2{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    color:white;
+    border-style: groove;
+    border-width: 1px;
+    border-color: lightgray;
+    margin-top:4px;
+    cursor: pointer;
+    
+}
+
+h4{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    color:white;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn-custom{
+    background-color:#d8c489;
+    color: black;
+}

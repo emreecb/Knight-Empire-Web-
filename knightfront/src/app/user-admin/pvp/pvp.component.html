@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6" *ngIf="goster">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="card-header">
+                        Savaşmak için 100 coin gereklidir.
+                    </div>
+                    <button href="#" class="redbutton" (click)="rakipbul()">Rakip bul!</button>
+                </div>
+                <div class="card-footer text-muted">
+                    <i class="ra ra-gold-bar"></i> {{money?.coin}} coininiz bulunmaktadır.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" *ngIf="!goster">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="card-header">
+                        {{userobj?.nickname}}
+                    </div>
+                    <h4 style="padding-top:10px">Level: {{userobj?.characterLevel}}</h4>
+                    <h4>National Point: {{userobj?.nationalPoint}}</h4>
+                    <h4>Coin: {{opmoney?.coin}}</h4>
+                    <button (click)="savas(template,template2)" class="greenbutton">Savaş!</button>
+                </div>
+                <div class="card-footer text-muted">
+                    <button (click)="rakipbul()" class="redbutton2">Yeniden Rakip bul!</button>
+                    <br>
+                    <i class="ra ra-gold-bar"></i> {{money?.coin}} coininiz bulunmaktadır.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-md-center" style="padding-top:25px">
+            <button class="text-center" routerLink="/User/characterdetails" class="btn btn-custom">Ana Sayfaya Dön!</button>
+    </div>
+</div>
+
+
+<ng-template #template>
+    <!-- <div class="container"> -->
+    <div class="my-modal">
+        <div class="row justify-content-center" style="margin-top:10px">
+            <div class="col-md-8" style="margin-bottom:10px">
+                <a href="#">
+                    <div class="textcontainimage">
+                        <img class="imgborder" src="../../../../assets/conceptart/ConceptArt_06.jpg" height="100%"
+                            width="100%">
+                        <div class="centered2">Zafer!</div>
+                        <p>50 National Point Kazandınız.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</ng-template>
+
+<ng-template #template2>
+    <!-- <div class="container"> -->
+    <div class="my-modal">
+        <div class="row justify-content-center" style="margin-top:10px">
+            <div class="col-md-8" style="margin-bottom:10px">
+                <a href="#">
+                    <div class="textcontainimage">
+                        <img class="imgborder" src="../../../../assets/conceptart/ConceptArt_06.jpg" height="100%"
+                            width="100%">
+                        <div class="centered2">Bozgun!</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+
+</ng-template>

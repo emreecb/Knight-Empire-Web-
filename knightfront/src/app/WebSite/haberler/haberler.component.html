@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;" *ngFor="let item of haberlist" >
+            <img class="card-img-top" src="{{item?.picture}}" alt="apos" width="286px" height="286px">
+            <div class="card-body">
+              <h5 class="card-title">{{item?.title}}</h5>
+              <p class="card-text">{{item?.explanation | slice:0:150}} </p>
+              <a [routerLink]="['/haberdetay',item.id]" class="btn bg-custom">Devamı İçin...</a>
+            </div>
+          </div>
+    </div>
+  </div>
+  <div class="row justify-content-md-center" style="padding-top:15px">
+      <button class="text-center" style="margin-bottom:15px; font-weight: bolder" routerLink="/" class="btn btn-custom">Ana Sayfaya Dön!</button>
+  </div>
+</div>

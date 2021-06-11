@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4" style="padding-right: 1vw">
+      <div class="card bg-light mb-3">
+        <div class="card-header">PVP Zafer Sayısı</div>
+        <div class="card-body">
+          <p class="card-text">{{userobj?.pvpWon}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4" style="padding-right: 1vw">
+        <div class="card bg-light mb-3">
+            <div class="card-header">PVP Bozgun Sayısı</div>
+            <div class="card-body">
+              <p class="card-text">{{userobj?.pvpLost}}</p>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-light mb-3">
+            <div class="card-header">PVP Başarı Yüzdesi</div>
+            <div class="card-body">
+              <p class="card-text">%{{basariyuzde | number}}</p>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-7">
+      <div class="list-group">
+        <li class="list-group-item">Görev:</li>
+        <button type="button" class="list-group-item list-group-item-action" *ngFor="let item of giftlist" style="margin:0px">{{item?.explanation}}</button>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="list-group">
+        <li class="list-group-item">Level:</li>
+        <li class="list-group-item" *ngFor="let item of giftlist" style="margin:0px" >{{item?.level}}</li>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <li class="list-group-item">Durum:</li>
+      <div class="list-group" *ngFor="let item of giftlist">        
+        <li class="list-group-item" *ngIf="userobj.characterLevel>= item.level" ><span class="badge badge-success">Tamamlandı</span></li>
+        <li class="list-group-item" *ngIf="item.level > userobj.characterLevel " ><span class="badge badge-secondary">Uygun Değil</span></li>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row justify-content-md-center" style="padding-top:25px">
+      <button class="text-center" routerLink="/User/characterdetails" class="btn btn-custom">Ana Sayfaya Dön!</button>
+</div>
+</div>

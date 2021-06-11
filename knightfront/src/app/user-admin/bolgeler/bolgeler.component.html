@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" style="padding-top:15px" *ngFor="let item of arealist">
+            <a>
+                <div class="textcontainimage">
+                    <img class="imgborder" [ngClass]="{'textOpacitynone' : item.cap , 'textOpacitymin' : !item.cap}" src="{{item?.photo}}" height="100%" width="100%" (click)="adres(item)" >
+                    <div class="bottom-left">{{item?.areaName}}</div>
+                </div>
+            </a>
+            
+        </div>
+       
+    </div>
+    <div class="row justify-content-md-center" style="padding-top:15px">
+        <button class="text-center" routerLink="/User/characterdetails" class="btn btn-custom">Ana Sayfaya Dön!</button>
+    </div>
+</div>

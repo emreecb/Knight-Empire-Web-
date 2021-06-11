@@ -1,0 +1,75 @@
+<div class="center-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="card-group panel-outer">
+            <div class="card p-4" style="background-color:#ffffff26">
+              <div class="card-body">
+                <form novalidate #f="ngForm" novalidate (ngSubmit)="registerUser(f)" >
+                  <h1>Kayıt Ol</h1>
+                  <p class="text-muted1">Kayıt Olun</p>
+                  <div class="input-group mb-3 form-group">
+                      <div class="input-group mb-4 form-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                          </div>
+                          <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Ad" ngModel>
+                        </div><div class="input-group mb-4 form-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Soyad" ngModel>
+                          </div><div class="input-group mb-4 form-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                              </div>
+                              <input type="text" class="form-control" id="nickName" name="nickName" placeholder="Nickname" ngModel>
+                            </div>
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    </div>
+                    <!--<input type="text" class="form-control" placeholder="Kullanıcı Adı">-->
+                    <input id="email" type="text" required name="email" validateEmail class="form-control" placeholder="Email" ngModel #email="ngModel">
+            <small [hidden]="email.valid || (email.pristine && !submitted)" class="text-danger">Hatalı mail girdiniz</small>
+                  </div>
+
+                  <div class="input-group mb-4 form-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    </div>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Şifre" ngModel>
+                  </div>
+                  <div class="input-group mb-4 form-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    </div>
+                    <input type="password" class="form-control" id="passcontrol" name="passcontrol" placeholder="Şifre Tekrar" [(ngModel)]="passcontrol">
+                  </div>
+                  <div class="row">
+                    <div class="col-6 form-group">
+                      <button type="submit"  class="btn btn-custom2 px-4">Kayıt OL</button>
+                    </div>
+
+
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card text-white bg-custom py-5 d-md-down-none">
+              <div class="card-body text-center">
+                <div>
+                  <h2>Kayıt Olun</h2>
+                  <br>
+                  <br>
+                  <br>
+                  <p>Karuslar ve Humanların savaşına dahil olmak için hemen üye olun!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

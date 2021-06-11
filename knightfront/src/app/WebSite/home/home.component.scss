@@ -1,0 +1,392 @@
+.container{
+    margin-left:auto;
+}
+.carousel-item{
+    border-style: groove;
+    border-width: 1px;  
+    border-color:lightgray;
+}
+
+.divArkaPlan{
+    padding:15px; 
+    background-color: #ffffff26; 
+    margin:0px
+}
+
+.redbutton{
+    color: #fff;
+    /* background: #d43232; */
+    background: -moz-linear-gradient(top,#d43232 0,#bb2020 27%,#bb2020 77%,#cd2d2d 100%);
+    /* background: -webkit-linear-gradient(top,#d43232 0,#bb2020 27%,#bb2020 77%,#cd2d2d 100%); */
+    background: linear-gradient(to bottom,#d43232 0,#bb2020 27%,#bb2020 77%,#cd2d2d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d43232', endColorstr='#cd2d2d', GradientType=0);
+    -webkit-box-shadow: inset 0 0 0 0 #ff8c8c;
+    -moz-box-shadow: inset 0 0 0 0 #ff8c8c;
+    box-shadow: inset 0 0 0 0 #ff8c8c;
+    border: 1px solid #f45757;
+    font-size: 1.2vw;
+    border-radius: 3px;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    font-weight: bold;    
+    text-align: center;
+    width:14.3vw;
+    height: 9vh;
+}
+
+.brownbutton{
+    color: #fff;
+    background: #a39150;
+    background: -moz-linear-gradient(top,#a39150 0,#937d45 24%,#856d3c 50%,#8d7641 79%,#9b884b 100%);
+    background: -webkit-linear-gradient(top,#a39150 0,#937d45 24%,#856d3c 50%,#8d7641 79%,#9b884b 100%);
+    background: linear-gradient(to bottom,#a39150 0,#937d45 24%,#856d3c 50%,#8d7641 79%,#9b884b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a39150', endColorstr='#9b884b', GradientType=0);
+    border: 1px solid #e8e48c;
+    -webkit-box-shadow: inset 0 0 0 0 #c4b991;
+    -moz-box-shadow: inset 0 0 0 0 #c4b991;
+    box-shadow: inset 0 0 0 0 #c4b991;
+    font-size: 1.2vw;
+    border-radius: 3px;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    font-weight: bold;
+    width:14.3vw;
+    height: 9vh;
+    text-align: center;    
+}
+
+
+
+.facebookbutton{
+    background-color:#3b5998;
+    color: #fff;    
+    text-align: center;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #3b5998;
+    border-radius: 2px;
+    width:3vw;
+    height: 5vh;
+    font-size: 1vw;
+}
+.youtubebutton{
+    background-color:#cc181e;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #cc181e;
+    border-radius: 2px;
+    width:3vw;
+    height: 5vh;
+    font-size: 1vw;
+}
+
+.instagrambutton{
+    background-color: #8a3ab9;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #8a3ab9;
+    border-radius: 2px;
+    width:3vw;
+    height: 5vh;
+    font-size: 1vw;
+}
+.twitterbutton{
+    background-color:#00aced;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #00aced;
+    border-radius: 2px;
+    width: 3vw;
+    height: 5vh;
+    font-size: 1vw;
+}
+
+.imgborder{
+    border-style: groove;
+    border-width: 1px;  
+    border-color:lightgray;
+}
+
+.textcontainimage {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-weight: bold;
+}
+
+.divMarginleme{
+    margin-top:2.2vw;
+}
+//768 ve 998 arası
+@media screen and (min-width:768px) and (max-width:998px) {
+
+    .col-md-3{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+        max-height: 1vw;
+    }
+
+    .facebookbutton{
+    background-color:#3b5998;
+    color: #fff;    
+    text-align: center;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #3b5998;
+    border-radius: 2px;
+    width:3vw;
+    height: 5vh;
+    font-size: 1vw;
+    visibility: hidden;
+}
+.youtubebutton{
+    background-color:#cc181e;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #cc181e;
+    border-radius: 2px;
+    width:3vw;
+    height: 5vh;
+    font-size: 1vw;
+    visibility: hidden;
+}
+
+.instagrambutton{
+    background-color: #8a3ab9;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #8a3ab9;
+    border-radius: 2px;
+    width:3vw;
+    height: 5vh;
+    font-size: 1vw;
+    visibility: hidden;
+}
+.twitterbutton{
+    background-color:#00aced;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #00aced;
+    border-radius: 2px;
+    width: 3vw;
+    height: 5vh;
+    font-size: 1vw;
+    visibility: hidden;
+}
+
+}
+//480-768 arası
+@media screen and (min-width:480px) and (max-width:768px) {
+    .redbutton{
+        color: #fff;
+        /* background: #d43232; */
+        background: -moz-linear-gradient(top,#d43232 0,#bb2020 27%,#bb2020 77%,#cd2d2d 100%);
+        /* background: -webkit-linear-gradient(top,#d43232 0,#bb2020 27%,#bb2020 77%,#cd2d2d 100%); */
+        background: linear-gradient(to bottom,#d43232 0,#bb2020 27%,#bb2020 77%,#cd2d2d 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d43232', endColorstr='#cd2d2d', GradientType=0);
+        -webkit-box-shadow: inset 0 0 0 0 #ff8c8c;
+        -moz-box-shadow: inset 0 0 0 0 #ff8c8c;
+        box-shadow: inset 0 0 0 0 #ff8c8c;
+        border: 1px solid #f45757;
+        font-size: 8vw;
+        border-radius: 3px;
+        text-shadow: 1px 1px rgba(0,0,0,.1);
+        font-weight: bold;    
+        text-align: center;
+        width:100%;
+        height: 15vh;
+    }
+
+    .brownbutton{
+        margin-top: 15px;
+        color: #fff;
+        background: #a39150;
+        background: -moz-linear-gradient(top,#a39150 0,#937d45 24%,#856d3c 50%,#8d7641 79%,#9b884b 100%);
+        background: -webkit-linear-gradient(top,#a39150 0,#937d45 24%,#856d3c 50%,#8d7641 79%,#9b884b 100%);
+        background: linear-gradient(to bottom,#a39150 0,#937d45 24%,#856d3c 50%,#8d7641 79%,#9b884b 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a39150', endColorstr='#9b884b', GradientType=0);
+        border: 1px solid #e8e48c;
+        -webkit-box-shadow: inset 0 0 0 0 #c4b991;
+        -moz-box-shadow: inset 0 0 0 0 #c4b991;
+        box-shadow: inset 0 0 0 0 #c4b991;
+        font-size: 8vw;
+        border-radius: 3px;
+        text-shadow: 1px 1px rgba(0,0,0,.1);
+        font-weight: bold;
+        width:100%;
+        height: 15vh;
+        text-align: center;    
+    }
+    
+
+    .facebookbutton{
+    background-color:#3b5998;
+    color: #fff;    
+    text-align: center;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #3b5998;
+    border-radius: 2px;
+    width:13vw;
+    height: 8vh;
+    font-size: 5vw;
+    margin-left:3vw
+}
+.youtubebutton{
+    background-color:#cc181e;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #cc181e;
+    border-radius: 2px;
+    width:13vw;
+    height: 8vh;
+    font-size: 5vw;
+}
+
+.instagrambutton{
+    background-color: #8a3ab9;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #8a3ab9;
+    border-radius: 2px;
+    width:13vw;
+    height: 8vh;
+    font-size: 5vw;
+}
+.twitterbutton{
+    background-color:#00aced;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #00aced;
+    border-radius: 2px;
+    width: 13vw;
+    height: 8vh;
+    font-size: 5vw;
+}
+
+}
+
+//mobile
+@media screen and (max-width:480px) {
+    .phone{
+        padding:0px;
+    }
+    
+    .container{
+        margin-left:auto;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    
+    .divArkaPlan{
+        padding:0px; 
+        background-color: #ffffff00; 
+        margin:0px
+    }
+
+    .carousel-item{
+        border-style: groove;
+        border-width: 1px;  
+        border-color:lightgray;
+        height: 30vh;
+    }
+    
+    .redbutton{
+        color: #fff;
+        /* background: #d43232; */
+        background: -moz-linear-gradient(top,#d43232 0,#bb2020 27%,#bb2020 77%,#cd2d2d 100%);
+        /* background: -webkit-linear-gradient(top,#d43232 0,#bb2020 27%,#bb2020 77%,#cd2d2d 100%); */
+        background: linear-gradient(to bottom,#d43232 0,#bb2020 27%,#bb2020 77%,#cd2d2d 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d43232', endColorstr='#cd2d2d', GradientType=0);
+        -webkit-box-shadow: inset 0 0 0 0 #ff8c8c;
+        -moz-box-shadow: inset 0 0 0 0 #ff8c8c;
+        box-shadow: inset 0 0 0 0 #ff8c8c;
+        border: 1px solid #f45757;
+        font-size: 8vw;
+        border-radius: 3px;
+        text-shadow: 1px 1px rgba(0,0,0,.1);
+        font-weight: bold;    
+        text-align: center;
+        width:100%;
+        height: 15vh;
+    }
+
+    .brownbutton{
+        margin-top: 15px;
+        color: #fff;
+        background: #a39150;
+        background: -moz-linear-gradient(top,#a39150 0,#937d45 24%,#856d3c 50%,#8d7641 79%,#9b884b 100%);
+        background: -webkit-linear-gradient(top,#a39150 0,#937d45 24%,#856d3c 50%,#8d7641 79%,#9b884b 100%);
+        background: linear-gradient(to bottom,#a39150 0,#937d45 24%,#856d3c 50%,#8d7641 79%,#9b884b 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a39150', endColorstr='#9b884b', GradientType=0);
+        border: 1px solid #e8e48c;
+        -webkit-box-shadow: inset 0 0 0 0 #c4b991;
+        -moz-box-shadow: inset 0 0 0 0 #c4b991;
+        box-shadow: inset 0 0 0 0 #c4b991;
+        font-size: 8vw;
+        border-radius: 3px;
+        text-shadow: 1px 1px rgba(0,0,0,.1);
+        font-weight: bold;
+        width:100%;
+        height: 15vh;
+        text-align: center;    
+    }
+
+    .facebookbutton{
+        background-color:#3b5998;
+        color: #fff;    
+        text-align: center;
+        text-shadow: 1px 1px rgba(0,0,0,.1);
+        border: 1px solid #3b5998;
+        border-radius: 2px;
+        width: 15vw;
+        height: 8vh;
+        font-size: 5vw;
+        margin-left: 12vw;
+    }
+    .youtubebutton{
+        background-color:#cc181e;
+        color: #fff;
+        text-align: center;
+        text-shadow: 1px 1px rgba(0,0,0,.1);
+        border: 1px solid #cc181e;
+        border-radius: 2px;
+        width: 15vw;
+        height: 8vh;
+        font-size: 5vw;
+    }
+    
+    .instagrambutton{
+        background-color: #8a3ab9;
+        color: #fff;
+        text-align: center;
+        text-shadow: 1px 1px rgba(0,0,0,.1);
+        border: 1px solid #8a3ab9;
+        border-radius: 2px;
+        width: 15vw;
+        height: 8vh;
+        font-size: 5vw;
+    }
+    .twitterbutton{
+        background-color:#00aced;
+        color: #fff;
+        text-align: center;
+        text-shadow: 1px 1px rgba(0,0,0,.1);
+        border: 1px solid #00aced;
+        border-radius: 2px;
+        width: 15vw;
+        height: 8vh;
+        font-size: 5vw;
+    }
+}

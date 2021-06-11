@@ -1,0 +1,56 @@
+<!-- Form Name -->
+<div class="container">
+<legend class="text-center" id="iletisimStart">İletişim Formu</legend>
+<h5 class="text-center text-danger"> <small> Mesajlarınız en kısa sürede cevaplanacaktır </small></h5>
+
+<div class="d-flex justify-content-center align-items-center ik">
+  <form class="form-horizontal">
+    <fieldset>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class=" control-label" for="textinput">Ad & Soyad</label>
+        <div>
+          <input name="textinput"  [(ngModel)]="iletisimobje.adSoyad" type="text" class="form-control input-md">
+        </div>
+      </div>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class=" control-label" for="textinput">e@mail</label>
+        <input  name="textinput" type="email" [(ngModel)]="iletisimobje.email" class="form-control input-md">
+      </div>
+
+      <div class="form-group">
+          <label class=" control-label" for="textinput">Telefon</label>
+          <input  name="textinput" type="text" [(ngModel)]="iletisimobje.telefon" class="form-control input-md">
+        </div>
+
+        <div class="form-group">
+            <label class=" control-label" for="textinput">Konu</label>
+            <input  name="textinput" type="text" [(ngModel)]="iletisimobje.konu" class="form-control input-md">
+          </div>
+      <!-- Textarea -->
+      <div class="form-group">
+        <label class=" control-label" for="textarea">Açıklama</label>
+          <textarea class="form-control" [(ngModel)]="iletisimobje.mesaj"  name="textarea"></textarea>
+      </div>
+
+      <!-- File Button -->
+      <div class="form-group">
+        <label class="control-label" for="filebutton">Dosya Gönder</label>
+        <div class="">
+          <input  name="filebutton" (change)="onFileSelected($event)" class="input-file" type="file">
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="control-label" for="singlebutton"></label>
+          <button  name="singlebutton" (click)="update()" class="btn btn-primary">Gönder</button>
+        </div>
+
+      </fieldset>
+      </form>
+    </div>
+  </div> 
+
+

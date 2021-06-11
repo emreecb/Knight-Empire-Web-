@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h4>Hesabınızdaki Knight Point: {{money?.knightPoint}}</h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-custom" type="button" (click)="kpyukle()" >Knight Point Yükleyin</button>
+      </div>   
+      
+    </div>
+    <div class="row" style="padding-top:10px">
+          <div class="col-md-4" style="padding-top:15px" *ngFor="let item of petlist">
+              <a >
+                  <div class="textcontainimage">
+                      <img class="imgborder" src="{{item?.photo}}" height="100%" width="100%">
+                      <div class="bottom-left">{{item?.name}}</div>                    
+                  </div>
+                  <h2 (click)="petal(item)">Satın Al</h2>
+                  <h4>{{item?.price}} Knight Point</h4>
+              </a>
+              
+          </div>
+          <div class="col-md-4" style="padding-top:15px" *ngFor="let item1 of marketlist">
+              <a>
+                  <div class="textcontainimage">
+                      <img class="imgborder" src="{{item1?.photo}}" height="100%" width="100%">
+                      <div class="bottom-left">{{item1?.itemAd}}</div>
+                  </div>
+                  <h2 (click)="satinal(item1)">Satın Al</h2>
+                  <h4>{{item1?.price}} Knight Point</h4>
+              </a>    
+          </div> 
+          
+    </div>
+  
+    <div class="row justify-content-md-center" style="padding-top:15px">
+          <button class="text-center" routerLink="/User/characterdetails" class="btn btn-custom">Ana Sayfaya Dön!</button>
+        </div>
+  </div>
+  

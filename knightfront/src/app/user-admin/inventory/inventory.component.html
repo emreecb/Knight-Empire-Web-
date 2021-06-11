@@ -1,0 +1,117 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4" *ngIf="inventorylist.length != 0">
+            <div class="card cardborder-edited">
+                <div class="card-body card-edited">
+                    <h5 class="card-title">Envanter</h5>
+                    <a class="tooltips" *ngFor="let item of inventorylist"><img src="{{item?.item?.photo}}" alt="..."
+                            class="rounded" style="width:50px;height: 50px;" (click)="show(item)">
+                        <span>
+                            <p class="{{item?.item?.itemAbout}}">{{item?.item?.itemName}} (+{{item?.itemLevel}})</p>
+                            <h6 *ngIf="item?.item?.itemType != 1">Attack Point: {{item.item.attack +
+                                item.item.statMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="item?.item?.itemType != 2">Defence Point: {{item.item.defence+
+                                item.item.statMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="item?.item?.itemType != 2">Health Point: {{item.item.health+
+                                item.item.statMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="item?.item.itemType ==2 && item.item.flameBonus !=0 ">Flame Bonus:
+                                {{item.item.flameBonus + item.item.bonusMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="item?.item.itemType ==2 && item.item.glacierBonus !=0 ">Glacier Bonus:
+                                {{item.item.glacierBonus + item.item.bonusMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="item?.item.itemType ==2 && item.item.lightningBonus !=0 ">Lightning Bonus:
+                                {{item.item.lightningBonus + item.item.bonusMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="item?.item.itemType ==2 && item.item.poisonBonus !=0 ">Poison Bonus:
+                                {{item.item.poisonBonus + item.item.bonusMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="_object?.item?.itemType == 6"><b>Item Türü: Küpe</b></h6>
+                            <h6 *ngIf="item?.item?.itemType == 5"><b>Item Türü: Kemer</b></h6>
+                            <h6 *ngIf="item?.item?.itemType == 4"><b>Item Türü: Yüzük</b></h6>
+                            <h6 *ngIf="item?.item?.itemType == 3"><b>Item Türü: Kolye</b></h6>
+                            <h6 *ngIf="item?.item?.itemType == 2"><b>Item Türü: Silah</b></h6>
+                            <h6 *ngIf="item?.item?.itemType == 1"><b>Item Türü: Zırh</b></h6>
+                            <p class="{{item?.item?.itemAbout}}">{{item?.item?.itemAbout}} Class Item</p>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" *ngIf="editarea==true">
+            <div class="card cardborder-edited">
+                <div class="card-body card-edited">
+                    <h5 class="card-title">Seçili Envanter</h5>
+                    <img src="{{_object?.item?.photo}}" alt="..." class="rounded" style="width:50px;height: 50px;">
+                    <p class="{{_object?.item?.itemAbout}}">{{_object?.item?.itemName}} (+{{_object?.itemLevel}})</p>
+                    <h6 *ngIf="_object?.item?.itemType != 1">Attack Point: {{_object.item.attack +
+                        _object.item.statMultiplier*_object.itemLevel}}</h6>
+                    <h6 *ngIf="_object?.item?.itemType != 2">Defence Point: {{_object.item.defence+
+                        _object.item.statMultiplier*_object.itemLevel}}</h6>
+                    <h6 *ngIf="_object?.item?.itemType != 2">Health Point: {{_object.item.health+
+                        _object.item.statMultiplier*_object.itemLevel}}</h6>
+                    <h6 *ngIf="_object?.item.itemType ==2 && _object.item.flameBonus !=0 ">Flame Bonus:
+                        {{_object.item.flameBonus + _object.item.bonusMultiplier*_object.itemLevel}}</h6>
+                    <h6 *ngIf="_object?.item.itemType ==2 && _object.item.glacierBonus !=0 ">Glacier Bonus:
+                        {{_object.item.glacierBonus + _object.item.bonusMultiplier*_object.itemLevel}}</h6>
+                    <h6 *ngIf="_object?.item.itemType ==2 && _object.item.lightningBonus !=0 ">Lightning Bonus:
+                        {{_object.item.lightningBonus + _object.item.bonusMultiplier*_object.itemLevel}}</h6>
+                    <h6 *ngIf="_object?.item.itemType ==2 && _object.item.poisonBonus !=0 ">Poison Bonus:
+                        {{_object.item.poisonBonus + _object.item.bonusMultiplier*_object.itemLevel}}</h6>
+                    <h6 *ngIf="_object?.item?.itemType == 6"><b>Item Türü: Küpe</b></h6>    
+                    <h6 *ngIf="_object?.item?.itemType == 5"><b>Item Türü: Kemer</b></h6>
+                    <h6 *ngIf="_object?.item?.itemType == 4"><b>Item Türü: Yüzük</b></h6>
+                    <h6 *ngIf="_object?.item?.itemType == 3"><b>Item Türü: Kolye</b></h6>
+                    <h6 *ngIf="_object?.item?.itemType == 2"><b>Item Türü: Silah</b></h6>
+                    <h6 *ngIf="_object?.item?.itemType == 1"><b>Item Türü: Zırh</b></h6>
+                    <p class="{{_object?.item?.itemAbout}}">{{_object?.item?.itemAbout}} Class Item</p>
+                    <button class="text-center" (click)="giy(_object)" class="btn btn-success"><i class="ra ra-vest"></i>
+                        Giy!</button> &nbsp;
+                    <button class="text-center" (click)="sat(_object)" class="btn btn-danger"><i class="ra ra-gold-bar"></i>
+                        Sat!</button>
+                    <br>
+                    <br>
+                    <button class="text-center" *ngIf="_object.itemType==1 || _object.itemType==2 " (click)="gelistir(_object)"
+                        class="btn btn-info"><i class="ra ra-anvil"></i> Geliştir!</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" *ngIf="wearlist.length != 0">
+            <div class="card cardborder-edited">
+                <div class="card-body card-edited">
+                    <h5 class="card-title">Aktif Envanter</h5>
+                    <a class="tooltips" *ngFor="let item of wearlist"><img src="{{item?.item?.photo}}" alt="..." class="rounded"
+                            style="width:50px;height: 50px;" (click)="show(item)">
+                        <span>
+                            <p class="{{item?.item?.itemAbout}}">{{item?.item?.itemName}} (+{{item?.itemLevel}})</p>
+                            <h6 *ngIf="item?.item?.itemType != 1">Attack Point: {{item.item.attack +
+                                item.item.statMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="item?.item?.itemType != 2">Defence Point: {{item.item.defence+
+                                item.item.statMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="item?.item?.itemType != 2">Health Point: {{item.item.health+
+                                item.item.statMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="item?.item.itemType ==2 && item.item.flameBonus !=0 ">Flame Bonus:
+                                {{item.item.flameBonus + item.item.bonusMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="item?.item.itemType ==2 && item.item.glacierBonus !=0 ">Glacier Bonus:
+                                {{item.item.glacierBonus + item.item.bonusMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="item?.item.itemType ==2 && item.item.lightningBonus !=0 ">Lightning Bonus:
+                                {{item.item.lightningBonus + item.item.bonusMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="item?.item.itemType ==2 && item.item.poisonBonus !=0 ">Poison Bonus:
+                                {{item.item.poisonBonus + item.item.bonusMultiplier*item.itemLevel}}</h6>
+                            <h6 *ngIf="item?.item?.itemType == 6"><b>Item Türü: Küpe</b></h6>
+                            <h6 *ngIf="item?.item?.itemType == 5"><b>Item Türü: Kemer</b></h6>
+                            <h6 *ngIf="item?.item?.itemType == 4"><b>Item Türü: Yüzük</b></h6>
+                            <h6 *ngIf="item?.item?.itemType == 3"><b>Item Türü: Kolye</b></h6>
+                            <h6 *ngIf="item?.item?.itemType == 2"><b>Item Türü: Silah</b></h6>
+                            <h6 *ngIf="item?.item?.itemType == 1"><b>Item Türü: Zırh</b></h6>
+                            <p class="{{item?.item?.itemAbout}}">{{item?.item?.itemAbout}} Class Item</p>
+                        </span>
+                    </a>
+                    <br>
+                    <br>
+                    <i class="ra ra-gold-bar"></i> {{money?.coin}} coin
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-md-center" style="padding-top:25px">
+        <button class="text-center" routerLink="/User/characterdetails" class="btn btn-custom">Ana Sayfaya Dön!</button>
+    </div>
+</div>

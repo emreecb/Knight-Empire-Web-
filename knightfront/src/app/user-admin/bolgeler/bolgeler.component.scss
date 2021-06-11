@@ -1,0 +1,36 @@
+.container {
+  margin-left: auto;
+  padding: 50px;
+  background-color: #ffffff4a;
+  position: relative;
+}
+
+.imgborder {
+  border-style: groove;
+  border-width: 1px;
+  border-color: lightgray;
+}
+
+.textcontainimage {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-weight: bold;
+}
+
+.textOpacitynone {
+  opacity: 1;
+}
+.textOpacitymin {
+  opacity: 0.4;
+}
+
+.btn-custom{
+  background-color:#d8c489;
+  color: black;
+}

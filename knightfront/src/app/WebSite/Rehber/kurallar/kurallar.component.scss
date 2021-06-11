@@ -1,0 +1,47 @@
+.container{
+    margin-left:auto;
+    padding:50px;
+    background-color:#ffffff4a;
+    position: relative;
+}
+
+.imgSize{
+    width: 643px;
+    height: 866px;
+}
+
+@media screen and (max-width:775px){
+    .imgSize{
+        width: 443px;
+        height: 666px;
+    }
+
+}
+
+@media screen and (max-width:555px){
+    .imgSize{
+        width: 380px;
+        height: 600px;
+    }
+
+}
+
+@media screen and (max-width:480px){
+    .imgSize{
+        width: 300px;
+        height: 466px;
+    }
+
+    .container{
+        margin-left:auto;
+        padding:5px;
+        background-color:#ffffff4a;
+        position: relative;
+    }
+
+}
+
+.btn-custom{
+    background-color:#d8c489;
+    color: black;
+}
