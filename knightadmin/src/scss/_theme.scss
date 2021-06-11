@@ -1,0 +1,101 @@
+
+/* width */
+::-webkit-scrollbar {
+  width:8px;
+  background: rgba(0,0, 0, 0.2);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+// forgot , login , register
+.app{
+  min-height: 100vh;
+}
+
+
+.wrapperx {
+  padding: 10px 15px !important;
+}
+
+ .row{
+   z-index: 1;
+   margin: 0 !important;
+ }
+///@at-root
+.test {
+  height: 3000px;
+  @include easing(3000ms);
+  background: #00b7ea;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #00b7ea 0%, #004b89 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #00b7ea 0%, #004b89 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #00b7ea 0%, #004b89 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#004b89', GradientType=0);
+  /* IE6-9 */
+  position: relative;
+  z-index: -1 !important;
+}
+
+.btn-transparent{
+  background: transparent !important;
+  color: #fff !important;
+}
+.pmClear{
+padding: 0 !important;
+margin: 0 !important;
+position: relative;
+z-index: 1 !important;
+}
+
+
+.layout-wrapper{
+    padding: 10px 15px !important;
+}
+
+
+// #ss silinebilir mi ?
+
+#ss{
+  .card{
+   background-color: transparent !important;
+   border: none;
+   border-radius: none;
+  }
+  .btn-link{
+    color: inherit;
+  }
+ }
+
+
+
+.card{
+  margin: 30px auto;
+}
+
+#a{
+  .container-fluid{
+    margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: 1px solid gray;
+    min-height: 50px;
+  }
+}
+.backGray{
+  background: #2f353a;
+}
+
+
+
+

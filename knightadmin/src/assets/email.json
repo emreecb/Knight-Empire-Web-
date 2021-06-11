@@ -1,0 +1,14 @@
+[
+  {
+    "id":1,
+    "email": "kullaniciadi@firmaismi.com",
+    "sifre": "firmaismiyil!",
+    "url": "https://passport.yandex.com.tr"
+  },
+  {
+    "id":2,
+    "email": "kullaniciadi@firmaismi.com",
+    "sifre": "firmaismiyil!",
+    "url": "https://passport.yandex.com.tr"
+  }
+]

@@ -1,0 +1,63 @@
+<div class="center-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="card-group panel-outer">
+            <div class="card p-4">
+              <div class="card-body">
+                <form novalidate #f="ngForm" novalidate (ngSubmit)="registerUser(f)" >
+                  <h1>Kayıt Ol</h1>
+                  <p class="text-muted">Kayıt Olun</p>
+                  <div class="input-group mb-3 form-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-user"></i></span>
+                    </div>
+                    <!--<input type="text" class="form-control" placeholder="Kullanıcı Adı">-->
+                    <input id="email" type="text" required name="email" validateEmail class="form-control" placeholder="Email" ngModel #email="ngModel">
+            <small [hidden]="email.valid || (email.pristine && !submitted)" class="text-danger">Hatalı mail girdiniz</small>
+                  </div>
+
+                  <div class="input-group mb-4 form-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-lock"></i></span>
+                    </div>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Şifre" ngModel>
+                  </div>
+                  <div class="input-group mb-4 form-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-lock"></i></span>
+                    </div>
+                    <input type="password" class="form-control" id="passcontrol" name="passcontrol" placeholder="Şifre Tekrar" [(ngModel)]="passcontrol">
+                  </div>
+                  <div class="row">
+                    <div class="col-6 form-group">
+                      <button type="submit"  class="btn btn-primary px-4">Kayıt OL</button>
+                    </div>
+                    <div class="col-6 text-right">
+                      <button type="button" routerLink="/forgotpass" class="btn btn-link px-0">Şifremi Unuttum !</button>
+                    </div>
+
+
+
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card text-white bg-warning py-5 d-md-down-none" style="width:44%">
+              <div class="card-body text-center">
+                <div>
+                  <h2>Üye Olun</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua.</p>
+                  <button type="button" routerLink="/register" class="btn btn-primary active mt-3">Hemen üye olun !</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

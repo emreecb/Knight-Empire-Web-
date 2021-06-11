@@ -1,0 +1,84 @@
+<div id="emprNav01" class="">
+  <div class="bodyFix"></div>
+  <div class="nav">
+    <div class="left">
+      <!-- <span><img routerLink="/anasayfa" [(src)]="this?.service.logo" ></span> -->
+      <span><img routerLink="/anasayfa" src="" ></span>
+
+      <span id="leftNavTrigger" class="navButton">
+        <i class="icon-menu"></i>
+      </span>
+    </div>
+    <div class="center hide768">
+      <ul>
+        <li>
+          <a routerLink="/dashboard">Anasayfa</a>
+        </li>
+        <li>
+          <a href="http://knightfront.turgutyazici.com" target="_blank">Website</a>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <ul>
+        <li class="hide768">
+          <a routerLink="/website/ayarlar">
+            <i class="icon-power" (click)="logout()"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- ### -->
+
+<div class="row pmClear">
+  <div id="leftFixed" class="slideInLeft animated faster"></div>
+  <div id="leftSideMenu" class="slideInLeft animated faster">
+    <ul>
+      <li class="navItem" *ngFor="let item of navItems_">
+        <a *ngIf="!item?.divider" (click)="subNavToggle($event)" routerLink="{{item?.url}}" [ngClass]="{'nav_title' : item?.title}">
+          <i class="nav-icon {{item?.icon}}"></i>{{item?.name || ""}}
+          <span class="badge {{'badge-'+item?.badge?.variant}}">{{item?.badge?.text}}</span>
+          <i *ngIf="item?.children" class="fas fa-chevron-down"></i>
+        </a>
+        <ul *ngIf="item?.children" class="droppedLink">
+          <li *ngFor="let subitem of item?.children">
+            <a routerLink="{{subitem?.url}}" [ngClass]="{'nav_title' : subitem.title}">
+              <i class="nav-icon {{subitem?.icon}}"></i>{{subitem?.name || ""}}
+              <span class="badge {{'badge-'+subitem?.badge?.variant}}">{{subitem?.badge?.text}}</span>
+            </a>
+          </li>
+        </ul>
+        <hr *ngIf="item.divider" style="padding: 0; margin: 0;">
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <div class="col pmClear backGray">
+    <div id="routerContainer">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div id="rightFixed" class="hide animated slideInRight faster"></div>
+  <div id="rightSideMenu" class="hide animated slideInRight faster"></div>
+
+
+</div>
+
+
+<div id="loadingWrapper">
+  <h2>İşleminiz Yapılyor...</h2>
+  <div class="sk-folding-cube">
+    <div class="sk-cube1 sk-cube"></div>
+    <div class="sk-cube2 sk-cube"></div>
+    <div class="sk-cube4 sk-cube"></div>
+    <div class="sk-cube3 sk-cube"></div>
+  </div>

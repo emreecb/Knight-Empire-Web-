@@ -1,0 +1,14 @@
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\bin\Release\netcoreapp2.1\Master.deps.json
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\bin\Release\netcoreapp2.1\Master.runtimeconfig.json
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\bin\Release\netcoreapp2.1\Master.runtimeconfig.dev.json
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\bin\Release\netcoreapp2.1\Master.dll
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\bin\Release\netcoreapp2.1\Master.pdb
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\obj\Release\netcoreapp2.1\Master.csprojAssemblyReference.cache
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\obj\Release\netcoreapp2.1\Master.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\obj\Release\netcoreapp2.1\Master.RazorAssemblyInfo.cache
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\obj\Release\netcoreapp2.1\Master.RazorAssemblyInfo.cs
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\obj\Release\netcoreapp2.1\Master.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\obj\Release\netcoreapp2.1\Master.AssemblyInfo.cs
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\obj\Release\netcoreapp2.1\Master.RazorTargetAssemblyInfo.cache
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\obj\Release\netcoreapp2.1\Master.dll
+C:\Users\pc\Desktop\Bitirme\knightapi\Master\obj\Release\netcoreapp2.1\Master.pdb

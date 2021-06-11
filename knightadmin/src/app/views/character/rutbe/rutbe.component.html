@@ -1,0 +1,140 @@
+<div class="row animated fadeInUp fast">
+  <div class="col-md-6">
+    <div class="card ">
+      <div class="card-header">
+        <div id="content-area">
+          <div class="right-area">
+            <i class="icon-briefcase"></i> Rutbe Bilgileri
+            <div class="card-header-actions">
+              <span class="card-header-action">
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="card-body">
+        <fieldset class="form-group">
+          <label>Rütbe  Adı</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input type="text" [(ngModel)]="_obje.rutbeAdi" class="form-control">
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label>Açıklama</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input type="text" [(ngModel)]="_obje.aciklama" class="form-control">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Min</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input type="text" [(ngModel)]="_obje.min" class="form-control">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Max</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input type="text" [(ngModel)]="_obje.max" class="form-control">
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card ">
+      <div class="card-header">
+        <div id="content-area">
+          <div class="right-area">
+            <i class="icon-briefcase"></i> Rutbe Logo
+            <div class="card-header-actions">
+              <span class="card-header-action">
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <fieldset class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupFileAddon01">
+                <i class="fa fa-file"></i>
+              </span>
+            </div>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"
+                (change)="onFileSelected($event,1)">
+              <label class="custom-file-label" for="inputGroupFile01">{{selectedFile?.name || 'Dosya Seç'}}</label>
+            </div>
+          </div>
+          <small class="text-muted">Logo 300 X 125 Boyutunda olmalıdır.</small>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <button type="button" (click)="update(_obje)" class="btn btn-danger btn-lg btn-block">Kaydet</button>
+    <button type="button" (click)="delete(_obje.id,_obje)" class="btn btn-secondary btn-lg btn-block">Bu Ürünü
+      Sil</button>
+    <hr class="hrenk">
+    <br>
+    <br>
+  </div>
+  <div class="col-md-12">
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+      <thead>
+        <tr>
+          <th width="40%" class="renk">Rütbe Adı</th>
+          <th width="40%" class="renk">Açıklama</th>
+          <th width="5%" class="renk">Logo</th>
+          <th width="5%" class="renk">MİN</th>
+          <th width="5%" class="renk">MAX</th>
+          <th width="5%" class="renk">Düzenle</th>
+          <th width="5%" class="renk">Sil</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of List">
+
+          <td style="font-weight:bold">{{item?.rutbeAdi}}</td>
+          <td style="font-weight:bold">{{item?.aciklama | slice:0:150}}</td>
+          <td class="text-center">
+            <img src="{{item?.logo}}" width="30px" alt="">
+          </td>
+          <td style="font-weight:bold">{{item?.min}}</td>
+          <td style="font-weight:bold">{{item?.max}}</td>
+          <td class="text-center">
+            <i class="fa fa-edit" (click)="edit(item)"></i>
+          </td>
+          <td class="text-center">
+            <i (click)="delete(item.id,item)" class="fa fa-trash"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

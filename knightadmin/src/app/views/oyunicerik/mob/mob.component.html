@@ -1,0 +1,273 @@
+<div class="row animated fadeInUp fast">
+  <div class="col-md-6">
+    <div class="card ">
+      <div class="card-header">
+        <div id="content-area">
+          <div class="right-area">
+            <i class="icon-briefcase"></i> Mob Bilgileri
+            <div class="card-header-actions">
+              <span class="card-header-action">
+                <!-- <small class="text-muted">İtem Tanım Bilgileri</small> -->
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="card-body">
+        <fieldset class="form-group">
+          <label>Mob Adı</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input type="text" [(ngModel)]="_mobobje.name"  class="form-control">
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label>Attack</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input type="text" [(ngModel)]="_mobobje.attack" class="form-control">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Defans</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input type="text" [(ngModel)]="_mobobje.defense" class="form-control">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Health</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input type="text" [(ngModel)]="_mobobje.health" class="form-control">
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="card ">
+        <div class="card-header">
+          <div id="content-area">
+            <div class="right-area">
+              <i class="icon-briefcase"></i> Mob Drop Bilgileri
+              <div class="card-header-actions">
+                <span class="card-header-action">
+                  <!-- <small class="text-muted">İtem Tanım Bilgileri</small> -->
+                </span>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+        <div class="card-body">
+          <fieldset class="form-group">
+            <label>Drop</label>
+            <div class="input-group">
+              <span class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </span>
+              <input type="text" [(ngModel)]="_mobobje.drop" class="form-control">
+            </div>
+          </fieldset>
+  
+          <fieldset class="form-group">
+              <label>Drop Group</label>
+              <div class="input-group">
+                <select [(ngModel)]="_mobobje.dropGroup">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+            </fieldset>
+          <fieldset class="form-group">
+            <label>Mana Value</label>
+            <div class="input-group">
+              <span class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-angle-right"></i>
+                </span>
+              </span>
+              <input type="text" [(ngModel)]="_mobobje.manaValue" class="form-control">
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    
+  </div>
+  <div class="col-md-6">
+    <div class="card ">
+      <div class="card-header">
+        <div id="content-area">
+          <div class="right-area">
+            <i class="icon-briefcase"></i> Mob Bonusları
+            <div class="card-header-actions">
+              <span class="card-header-action">
+                <!-- <small class="text-muted">Pet özel bonusları</small> -->
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+       
+        <fieldset class="form-group">
+          <label>Min Level</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input type="text" [(ngModel)]="_mobobje.minLevel" class="form-control">
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label>Max Exp</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input type="text" [(ngModel)]="_mobobje.maxExp" class="form-control">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Min Exp</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input type="text" [(ngModel)]="_mobobje.minExp" class="form-control">
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label>Max Coin</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input type="text" [(ngModel)]="_mobobje.maxCoin" class="form-control">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Min Coin</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input type="text" [(ngModel)]="_mobobje.minCoin" class="form-control">
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+          <i class="far fa-folder-open"></i> Mob Fotoğrafı
+          <div class="card-header-actions">
+            <span class="card-header-action">
+            </span>
+          </div>
+        </div>
+        <div class="card-body">
+          <fieldset class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupFileAddon01">
+                  <i class="fa fa-file"></i>
+                </span>
+              </div>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"
+                  (change)="onFileSelected($event)">
+                <label class="custom-file-label" for="inputGroupFile01">{{selectedFile?.name || 'Dosya Seç'}}</label>
+              </div>
+            </div>
+            <small class="text-muted">Logo 300 X 125 Boyutunda olmalıdır.</small>
+          </fieldset>
+        </div>
+      </div>
+  </div>
+  <div class="col-md-12">
+    <button type="button" (click)="update(_mobobje)" class="btn btn-danger btn-lg btn-block">Kaydet</button>
+    <button type="button" (click)="delete(_mobobje.id,_mobobje)" class="btn btn-secondary btn-lg btn-block">Bu Ürünü
+      Sil</button>
+    <hr class="hrenk">
+    <br>
+    <br>
+  </div>
+  <div class="col-md-12">
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+      <thead>
+        <tr>
+          <th width="40%" class="renk">Mob Adı</th>
+          <th width="5%" class="renk">Foto</th>
+          <th width="5%" class="renk">Mana</th>
+          <th width="5%" class="renk">Attack</th>
+          <th width="5%" class="renk">Defans</th>
+          <th width="5%" class="renk">Health</th>
+          <th width="5%" class="renk">Aktif</th>
+          <th width="5%" class="renk">Düzenle</th>
+          <th width="5%" class="renk">Sil</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of mobListe">
+
+          <td style="font-weight:bold">{{item?.name}}</td>
+          <td class="text-center">
+            <img src="{{item?.photo}}" width="50px" alt="">
+          </td>
+          <td>{{item?.manaValue}}</td>
+
+          <td class="text-center">{{item?.attack}}</td>
+          <td class="text-center">{{item?.defense}}</td>
+          <td class="text-center">{{item?.health}}</td>
+          <td class="text-center">
+            <label class="switch switch-3d switch-success align-middle mt10">
+              <input [checked]="item.active" class="switch-input" type="checkbox" (click)="activePassive(item)">
+              <span class="switch-slider"></span>
+            </label>
+          </td>
+          <td class="text-center">
+            <i class="fa fa-edit" (click)="edit(item)"></i>
+          </td>
+          <td class="text-center">
+            <i (click)="delete(item.id,item)" class="fa fa-trash"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

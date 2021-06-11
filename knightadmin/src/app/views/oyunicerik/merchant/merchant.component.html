@@ -1,0 +1,158 @@
+<div class="row animated fadeInUp fast">
+  <div class="col-md-6">
+    <div class="card ">
+      <div class="card-header">
+        <div id="content-area">
+          <div class="right-area">
+            <i class="icon-briefcase"></i> Merchant
+            <div class="card-header-actions">
+              <span class="card-header-action">
+                <!-- <small class="text-muted">İtem Tanım Bilgileri</small> -->
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <fieldset class="form-group">
+          <label>İtem Type</label>
+          <div class="input-group">
+            <select [(ngModel)]="itemobje.itemType">
+              <option value="1">Armor</option>
+              <option value="2">Weapon</option>
+              <option value="3">Takı</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <label>İtem Ad</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input
+              type="text"
+              [(ngModel)]="itemobje.itemAd"
+              class="form-control"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label>Price</label>
+          <div class="input-group">
+            <span class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </span>
+            <input
+              type="text"
+              [(ngModel)]="itemobje.price"
+              class="form-control"
+            />
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card ">
+      <div class="card-header">
+        <div id="content-area">
+          <div class="right-area">
+            <i class="icon-briefcase"></i> Item Fotoğrafı
+            <div class="card-header-actions">
+              <span class="card-header-action"> </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-body">
+          <fieldset class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupFileAddon01">
+                  <i class="fa fa-file"></i>
+                </span>
+              </div>
+              <div class="custom-file">
+                <input
+                  type="file"
+                  class="custom-file-input"
+                  id="inputGroupFile01"
+                  aria-describedby="inputGroupFileAddon01"
+                  (change)="onFileSelected($event, 1)"
+                />
+                <label class="custom-file-label" for="inputGroupFile01">{{
+                  selectedFile?.name || "Dosya Seç"
+                }}</label>
+              </div>
+            </div>
+            <small class="text-muted"
+              >Logo 300 X 125 Boyutunda olmalıdır.</small
+            >
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <button
+      type="button"
+      (click)="update(itemobje)"
+      class="btn btn-danger btn-lg btn-block"
+    >
+      Kaydet
+    </button>
+    <button
+      type="button"
+      (click)="delete(itemobje.id, itemobje)"
+      class="btn btn-secondary btn-lg btn-block"
+    >
+      Bu Ürünü Sil
+    </button>
+    <hr class="hrenk" />
+    <br />
+    <br />
+  </div>
+  <div class="col-md-12">
+    <table
+      datatable
+      [dtOptions]="dtOptions"
+      [dtTrigger]="dtTrigger"
+      class="row-border hover"
+    >
+      <thead>
+        <tr>
+          <th width="20%" style="text-align: center" class="renk">İtem Type</th>
+          <th width="20%" style="text-align: center" class="renk">İtem Ad</th>
+          <th width="20%" style="text-align: center" class="renk">Price</th>
+          <th width="20%" style="text-align: center" class="renk">Fotoğraf</th>
+          <th width="20%" style="text-align: center" class="renk">Düzenle</th>
+          <th width="20%" style="text-align: center" class="renk">Sil</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of itemliste">
+          <td style="text-align: center">{{ item?.itemType }}</td>
+          <td style="text-align: center" style="font-weight:bold">{{ item?.itemAd }}</td>
+          <td style="text-align: center">{{ item?.price }}</td>
+          <td class="text-center">
+              <img src="{{item?.photo}}" width="50px" alt="">
+          </td>
+          <td style="text-align: center">
+            <i class="fa fa-edit" (click)="edit(item)"></i>
+          </td>
+          <td class="text-center" style="text-align: center">
+            <i (click)="delete(item.id, item)" class="fa fa-trash"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

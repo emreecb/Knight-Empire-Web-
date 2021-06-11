@@ -1,0 +1,109 @@
+<div class="row animated fadeInUp fast">
+  <div class="col-md-6">
+    <div class="card ">
+      <div class="card-header">
+        <div id="content-area">
+          <div class="right-area">
+            <i class="icon-briefcase"></i> Area-Mob Bilgileri
+            <div class="card-header-actions">
+              <span class="card-header-action"> </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <fieldset class="form-group">
+          <label>Area : </label> <label>{{ areaname }}</label>
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Mob List</label>
+          <div class="input-group">
+            <select [(ngModel)]="obje.mobId">
+              <option value="" >Mob Seçiniz</option>
+              <option *ngFor="let item of moblist" value="{{item.id}}">{{
+                item.name
+              }}</option>
+            </select>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card ">
+      <div class="card-header">
+        <div id="content-area">
+          <div class="right-area">
+            <i class="icon-briefcase"></i> Area-Mob List
+            <div class="card-header-actions">
+              <span class="card-header-action"> </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+          <fieldset class="form-group">
+            <div *ngFor="let item of areamoblist">
+                <label >{{item?.name}} &nbsp;</label><i class="fas fa-times-circle delete-varyant-icon" style="color:red;" (click)="delete(item)" ></i>
+
+            </div>
+            </fieldset>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+      <div class="col-md-12">
+        <button type="button" (click)="update(0, obje)" class="btn btn-danger btn-lg btn-block">Kaydet</button>
+        <hr class="hrenk" />
+        <br />
+        <br />
+      </div>
+      <div class="col-md-12">
+        <table
+          datatable
+          [dtOptions]="dtOptions"
+          [dtTrigger]="dtTrigger"
+          class="row-border hover"
+        >
+          <thead>
+            <tr>
+              <th width="40%" class="renk">Area Name</th>
+              <th width="5%" class="renk">Aktif</th>
+              <th width="5%" class="renk">Düzenle</th>
+              <th width="5%" class="renk">Sil</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of arealist">
+              <td style="font-weight:bold">{{ item?.areaName }}</td>
+              <td class="text-center">
+                <label
+                  class="switch switch-3d switch-success align-middle mt10"
+                >
+                  <input
+                    [checked]="item.active"
+                    class="switch-input"
+                    type="checkbox"
+                    (click)="activePassive(item)"
+                  />
+                  <span class="switch-slider"></span>
+                </label>
+              </td>
+              <td class="text-center">
+                <i class="fa fa-edit" (click)="edit(item)"></i>
+              </td>
+              <td class="text-center">
+                <i (click)="delete(item.id, item)" class="fa fa-trash"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  <!-- </div>
+</div> -->
